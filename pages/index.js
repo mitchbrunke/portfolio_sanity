@@ -4,10 +4,12 @@ import Image from "next/image";
 import Slider from "../components/Slider";
 import styles from "../styles/Home.module.css";
 import { sanityClient, urlFor } from "../lib/sanity";
+import LogoSlider from "../components/Logos";
 
 const heroDataQuery = `*[_type == "home_slider"]`;
+const logosDataQuery = `*[_type == "logos"]`;
 
-export default function Home({ heroData }) {
+export default function Home({ heroData, logosData }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,6 +20,29 @@ export default function Home({ heroData }) {
 
       <main className={styles.main}>
         <Slider heroData={heroData} />
+
+        <section className={styles.about}>
+          <div className={styles.bigText}>
+            <h5>
+              I am a front-end developer based in Queensland, Australia. I
+              mainly work with react, next.js and/or WordPress.
+            </h5>
+          </div>
+          <div className={styles.littleText}>
+            <p>
+              I have been working in Web Development since 2014 in both remote
+              and office settings. Below is my preferred tech stack but I am
+              always open to learning new tools for to overcome a particular
+              challenge.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.logoContainer}>
+          <h3>A few folks I have worked with.</h3>
+
+          <LogoSlider logosData={logosData} />
+        </section>
       </main>
     </div>
   );
@@ -25,6 +50,7 @@ export default function Home({ heroData }) {
 
 export async function getStaticProps() {
   const heroData = await sanityClient.fetch(heroDataQuery);
+  const logosData = await sanityClient.fetch(logosDataQuery);
 
-  return { props: { heroData } };
+  return { props: { heroData, logosData } };
 }

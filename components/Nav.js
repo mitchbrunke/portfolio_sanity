@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
-import styles from "../styles/Hello.module.css";
+import styles from "../styles/Layout.module.css";
 
 const Nav = () => {
   const [openNav, setNavOpen] = useState(true);
@@ -47,7 +47,7 @@ const Nav = () => {
 
       <Link href="/">
         <a>
-          <div className="contactIcon">
+          <div className={styles.contactIcon}>
             <MailOutlineIcon color="disabled" fontSize="large" />
           </div>
         </a>

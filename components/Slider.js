@@ -45,25 +45,26 @@ const Slider = ({ heroData }) => {
       <div ref={sliderRef} className={`${["keen-slider"]} `}>
         {heroData.map((project) => (
           <div
-            className={`${["keen-slider__slide"]}  ${styles.slide} `}
+            className={`${["keen-slider__slide"]}  ${styles.slide} ${[
+              "single_slide",
+            ]} `}
             key={project.title}
           >
+            <style jsx>{`
+              .single_slide {
+                background: url(${urlFor(project.hero)
+                  .width(1920)
+                  .height(1080)
+                  .url()});
+                background-position: center;
+                background-size: cover;
+              }
+            `}</style>
             <h1>{project.title}</h1>
             <h4>{project.stack}</h4>
-            <img
-              className={styles.heroImg}
-              src={urlFor(project.hero).width(1920).height(1080).url()}
-            />
           </div>
         ))}
         ;
-        {/* <div
-          className={`${["keen-slider__slide"]} ${["number-slide2"]} ${
-            styles.slide
-          } `}
-        >
-          <h1>hello world</h1>
-        </div> */}
       </div>
 
       {slider && (
