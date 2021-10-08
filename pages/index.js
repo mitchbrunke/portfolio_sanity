@@ -4,7 +4,7 @@ import Image from "next/image";
 import Slider from "../components/Slider";
 import styles from "../styles/Home.module.css";
 import { sanityClient, urlFor } from "../lib/sanity";
-import LogoSlider from "../components/Logos";
+import Link from "next/link";
 
 const heroDataQuery = `*[_type == "home_slider"]`;
 const logosDataQuery = `*[_type == "logos"]`;
@@ -40,8 +40,45 @@ export default function Home({ heroData, logosData }) {
 
         <section className={styles.logoContainer}>
           <h3>A few folks I have worked with.</h3>
+          <div className={styles.logos}>
+            <div className={styles.logo}>
+              <img src="/mn.jpg" alt="" srcset="" />
+            </div>
+            <div className={styles.logo}>
+              <img src="/the-coding-company-1.webp" alt="" srcset="" />
+            </div>
+            <div className={styles.logo}>
+              <img
+                src="/hervey-bay-seafood-fesitval-logo.svg"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <div className={styles.logo}>
+              <img src="/fcte-logo-black.png" alt="" srcset="" />
+            </div>
+            <div className={styles.logo}>
+              <img src="/qg-coa-ogp.png" alt="" srcset="" />
+            </div>
+            <div className={styles.logo}>
+              <img src="/vivere.jpg" alt="" srcset="" />
+            </div>
+          </div>
+        </section>
 
-          <LogoSlider logosData={logosData} />
+        <section className={styles.projects}>
+          <div className={styles.project}>
+            <h5>Hervey Bay Seafood Festival</h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Incidunt, in autem vitae pariatur alias officia quidem? Magni
+              deserunt ad nulla?
+            </p>
+            <Link href="#">
+              <a>View Project</a>
+            </Link>
+            <img src="/hbsf header.png" alt="" />
+          </div>
         </section>
       </main>
     </div>
