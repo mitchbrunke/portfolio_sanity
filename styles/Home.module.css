@@ -2,6 +2,7 @@
   margin: 0 auto;
   width: 85vw;
   position: relative;
+ 
 }
 
 .slide {
@@ -9,6 +10,22 @@
   margin: auto;
   position: relative;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+text-align: center;
+}
+
+.slide h1 {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.slide h4 {
+  margin: 0;
+  padding: 0;
 }
 
 #right {
@@ -86,6 +103,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  background-color: white;
 }
 
 .projects h3 {
@@ -122,6 +140,8 @@
   margin-top: 1rem;
 }
 
+
+
 @media (min-width: 600px) {
   #right {
     right: -61px;
@@ -142,6 +162,32 @@
   .logo {
     width: 20%;
   }
+}
+
+@media (min-width: 700px) {
+
+  .project {
+    flex-direction: row;
+    
+  }
+
+  #vfc {
+    flex-direction: row-reverse;
+  }
+
+  #vfc .p_text {
+    margin: 5rem 0 0 -4rem;
+  }
+
+  .p_text {
+    width: 50%;
+    border: 2px solid #eee;
+    padding: 1rem;
+    margin: 5rem -4rem 0 0;
+    background-color: white;
+    z-index: 99;
+  }
+  
 }
 
 @media (min-width: 1000px) {
@@ -171,9 +217,28 @@
   .logos {
     width: 70vw;
     margin: 0 auto;
+    justify-content: center;
   }
 
   .logo {
     width: 12%;
+  }
+
+  .project {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  .project {
+    max-width: 900px;
+  }
+
+  .p_text {
+    margin: 8rem -4rem 0 0;
+  }
+
+  #vfc .p_text {
+    margin: 8rem 0 0 -6rem;
   }
 }

@@ -68,16 +68,42 @@ export default function Home({ heroData, logosData }) {
 
         <section className={styles.projects}>
           <div className={styles.project}>
-            <h5>Hervey Bay Seafood Festival</h5>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Incidunt, in autem vitae pariatur alias officia quidem? Magni
-              deserunt ad nulla?
-            </p>
-            <Link href="#">
-              <a>View Project</a>
-            </Link>
-            <img src="/hbsf header.png" alt="" />
+            <div className={styles.p_text}>
+              <h5>Hervey Bay Seafood Festival</h5>
+              <p>
+                This project brief was simple: build a website that will remain
+                fast and not crash when tickets go live and be easy to navigate
+                on mobile. <br /> The solution was to rebuild the dated
+                WordPress site with more modern technologies such as Next.js and
+                Sanity CMS.{" "}
+              </p>
+              <Link href="https://www.herveybayseafoodfestival.com.au/">
+                <a>View Project</a>
+              </Link>
+            </div>
+            <div className={styles.p_img}>
+              <img src="/hbsf header.png" alt="" />
+            </div>
+          </div>
+
+          <div className={styles.project} id={styles.vfc}>
+            <div className={styles.p_text}>
+              <h5>Visit Fraser Coast</h5>
+              <p>
+                This site started its life as a slow WordPress website which
+                used a page builder and had over 20s page load times. It now
+                uses a custom WordPress theme which can easily be managed by the
+                marketing team. It also features a custom back-end which allows
+                complete control over the data being fetched from an external
+                API. <br />
+              </p>
+              <Link href="https://www.visitfrasercoast.com/">
+                <a>View Project</a>
+              </Link>
+            </div>
+            <div className={styles.p_img}>
+              <img src="/vfcaccomm.PNG" alt="" />
+            </div>
           </div>
         </section>
       </main>

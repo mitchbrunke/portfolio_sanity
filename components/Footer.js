@@ -14,19 +14,34 @@ const Footer = () => {
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.topForm}>
-          <label htmlFor="name">Name</label>
-          <input id="name" type="name" name="name" placeholder="Name..." />
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" name="email" placeholder="Email..." />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <div className={styles.name}>
+            <label htmlFor="name">Name</label>
+            <input id="name" type="name" name="name" placeholder="Name..." />
+          </div>
+          <div className={styles.email}>
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email..."
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+          </div>
         </div>
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" placeholder="Message..." />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-        />
+        <div className={styles.message}>
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" placeholder="Message..." />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+        </div>
         <button type="submit" disabled={state.submitting}>
           Submit
           <ArrowForwardOutlinedIcon fontSize="medium" />

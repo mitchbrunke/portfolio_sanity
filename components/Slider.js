@@ -52,10 +52,12 @@ const Slider = ({ heroData }) => {
           >
             <style jsx>{`
               .single_slide {
-                background: url(${urlFor(project.hero)
-                  .width(1920)
-                  .height(1080)
-                  .url()});
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                  ),
+                  url(${urlFor(project.hero).width(1920).height(1080).url()});
                 background-position: center;
                 background-size: cover;
               }

@@ -162,4 +162,19 @@
   .logo img {
     width: 5vw;
   }
+
+  .topForm {
+    flex-direction: row;
+    width: 100%;
+    
+  }
+
+  .name, .email {
+    width: 50%;
+  }
+
+  .form {
+    width: 65vw;
+  }
+  
 }
