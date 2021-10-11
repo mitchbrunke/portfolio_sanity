@@ -42,26 +42,50 @@ export default function Home({ heroData, logosData }) {
           <h3>A few folks I have worked with.</h3>
           <div className={styles.logos}>
             <div className={styles.logo}>
-              <img src="/mn.jpg" alt="" srcset="" />
+              <Image
+                src="/mn.png"
+                alt="vfc image"
+                width={500}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
             <div className={styles.logo}>
-              <img src="/the-coding-company-1.webp" alt="" srcset="" />
+              <Image
+                src="/the-coding-company-1.webp"
+                alt="vfc image"
+                width={500}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
             <div className={styles.logo}>
-              <img
+              <Image
                 src="/hervey-bay-seafood-fesitval-logo.svg"
-                alt=""
-                srcset=""
-              />
+                alt="vfc image"
+                width={500}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
             <div className={styles.logo}>
-              <img src="/fcte-logo-black.png" alt="" srcset="" />
+              <Image
+                src="/1519861182301__1.png"
+                alt="vfc image"
+                width={500}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
+
             <div className={styles.logo}>
-              <img src="/qg-coa-ogp.png" alt="" srcset="" />
-            </div>
-            <div className={styles.logo}>
-              <img src="/vivere.jpg" alt="" srcset="" />
+              <Image
+                src="/vivere.png"
+                alt="vfc image"
+                width={500}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
           </div>
         </section>
@@ -82,7 +106,13 @@ export default function Home({ heroData, logosData }) {
               </Link>
             </div>
             <div className={styles.p_img}>
-              <img src="/hbsf header.png" alt="" />
+              <Image
+                src="/hbsf header.png"
+                alt="vfc image"
+                width={1000}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
           </div>
 
@@ -102,7 +132,13 @@ export default function Home({ heroData, logosData }) {
               </Link>
             </div>
             <div className={styles.p_img}>
-              <img src="/vfcaccomm.PNG" alt="" />
+              <Image
+                src="/vfcaccomm.PNG"
+                alt="vfc image"
+                width={1000}
+                height={500}
+                layout="intrinsic"
+              ></Image>
             </div>
           </div>
         </section>
