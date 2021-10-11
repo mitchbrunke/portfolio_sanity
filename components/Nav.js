@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Layout.module.css";
 
 const Nav = () => {
@@ -20,7 +21,12 @@ const Nav = () => {
       <div className={styles.logo}>
         <Link href="/">
           <a>
-            <img src="/logo.png" alt="logo" />
+            <Image
+              src="/logo.png"
+              height={300}
+              width={300}
+              layout="intrinsic"
+            ></Image>
           </a>
         </Link>
       </div>
