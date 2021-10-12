@@ -23,6 +23,8 @@ const Slider = ({ heroData }) => {
     },
   });
 
+  //useEffect for the pause, timer & autoplay
+
   useEffect(() => {
     sliderRef.current.addEventListener("mouseover", () => {
       setPause(true);
@@ -41,6 +43,8 @@ const Slider = ({ heroData }) => {
   }, [sliderRef, pause, slider]);
 
   return (
+    //this needs to be tidied up, a little yuck. I should have used Glide or something like that.
+
     <div className={`${["navigation-wrapper"]} ${styles.sliderContainer}`}>
       <div ref={sliderRef} className={`${["keen-slider"]} `}>
         {heroData.map((project) => (
