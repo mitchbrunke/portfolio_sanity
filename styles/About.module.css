@@ -24,3 +24,39 @@ text-align: center;
     display: flex;
     flex-direction: column;
 }
+
+
+@media (min-width: 700px) {
+
+    .feature {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .text {
+        width: 55%;
+        padding: 0 2rem;
+    }
+
+    .image {
+        width: 45%;
+        position: relative;
+    }
+
+}
+
+@media (min-width: 1000px) {
+.feature {
+    width: 75vw;
+    margin: auto;
+    padding: 5rem 0;
+}
+
+.text {
+    max-width: 30vw;
+}
+
+.image {
+    max-width: 400px;
+}
+}
