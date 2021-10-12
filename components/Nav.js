@@ -6,6 +6,9 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Layout.module.css";
 
+// You will notice the use of a secondary nav list
+//I saw someone on stack talking about how it could be a nice solution for a nav toggle but it sucks and will be removed
+
 const Nav = () => {
   const [openNav, setNavOpen] = useState(true);
   const isOpen = openNav;

@@ -6,6 +6,9 @@ import styles from "../styles/Home.module.css";
 import { sanityClient, urlFor } from "../lib/sanity";
 import Link from "next/link";
 
+//Get Sanity Data - using GROC
+//Accessibility to be added & make logos compononent or footer component, looks a little gross
+
 const heroDataQuery = `*[_type == "home_slider"]`;
 const logosDataQuery = `*[_type == "logos"]`;
 
@@ -151,6 +154,8 @@ export default function Home({ heroData, logosData }) {
     </div>
   );
 }
+
+//get static props from Sanity.
 
 export async function getStaticProps() {
   const heroData = await sanityClient.fetch(heroDataQuery);
