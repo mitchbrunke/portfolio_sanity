@@ -43,11 +43,6 @@ const Nav = () => {
               <li>about</li>
             </a>
           </Link>
-          <Link href="/contact">
-            <a className={router.pathname == "/contact" ? "active" : ""}>
-              <li>contact</li>
-            </a>
-          </Link>
         </ul>
       </nav>
 

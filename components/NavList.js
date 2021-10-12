@@ -15,11 +15,6 @@ const NavList = ({ openNav }) => {
             <li>about</li>
           </a>
         </Link>
-        <Link href="/contact">
-          <a>
-            <li>contact</li>
-          </a>
-        </Link>
       </ul>
     </div>
   );

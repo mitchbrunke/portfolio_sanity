@@ -38,6 +38,8 @@ export default function Home({ heroData, logosData }) {
           </div>
         </section>
 
+        <hr />
+
         <section className={styles.logoContainer}>
           <h3>A few folks I have worked with.</h3>
           <div className={styles.logos}>
@@ -90,16 +92,18 @@ export default function Home({ heroData, logosData }) {
           </div>
         </section>
 
+        <hr />
+
         <section className={styles.projects}>
           <div className={styles.project}>
             <div className={styles.p_text}>
               <h5>Hervey Bay Seafood Festival</h5>
               <p>
-                This project brief was simple: build a website that will remain
-                fast and not crash when tickets go live and be easy to navigate
-                on mobile. <br /> The solution was to rebuild the dated
-                WordPress site with more modern technologies such as Next.js and
-                Sanity CMS.{" "}
+                This project brief was simple: Take the designs and build a
+                website that will remain fast and not crash when tickets go live
+                and be easy to navigate on mobile. <br /> The solution was to
+                rebuild the dated WordPress site with more modern technologies
+                such as Next.js and Sanity CMS.{" "}
               </p>
               <Link href="https://www.herveybayseafoodfestival.com.au/">
                 <a>View Project</a>
@@ -123,7 +127,8 @@ export default function Home({ heroData, logosData }) {
                 This site started its life as a slow WordPress website which
                 used a page builder and had over 20s page load times. It now
                 uses a custom WordPress theme which can easily be managed by the
-                marketing team. It also features a custom back-end which allows
+                marketing team and is earmarked to become a headless WordPress
+                application. It also features a custom back-end which allows
                 complete control over the data being fetched from an external
                 API. <br />
               </p>
