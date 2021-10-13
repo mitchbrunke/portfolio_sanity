@@ -10,8 +10,7 @@ import styles from "../styles/Layout.module.css";
 //I saw someone on stack talking about how it could be a nice solution for a nav toggle but it sucks and will be removed
 
 const Nav = () => {
-  const [openNav, setNavOpen] = useState(true);
-  const isOpen = openNav;
+  const [openNav, setNavOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -34,7 +33,7 @@ const Nav = () => {
         </Link>
       </div>
 
-      <nav className={isOpen ? styles.nav : styles.no_nav}>
+      <nav className={openNav ? styles.open_nav : styles.nav}>
         <ul>
           <Link href="/">
             <a className={router.pathname == "/" ? "active" : ""}>

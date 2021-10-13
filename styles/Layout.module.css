@@ -7,30 +7,32 @@
   align-items: center;
   margin-bottom: 4vh;
   border-bottom: 1px solid #eee;
-}
-
-/* this is super gross and had to be reversed for useEffect to work - rebuild with material ui or something like that for future */
-
-.no_nav ul {
-  width: 50vw;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 8vh;
-  background: white;
-  z-index: 99;
-}
-
-.no_nav li {
-  padding: 1rem 0;
+  
 }
 
 .nav ul {
-  display: none;
+  border: 1px solid blue;
+  transform: translateX(100vw);
+}
+
+.open_nav ul {
+  border: 2px solid #acacac;
+  background: white;
+  width: 70vw;
+  height: 100vh;
+  transform: translateX(1px);
+  position: absolute;
+  top: 7vh;
+  right: 1px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.open_nav li {
+  padding: 2rem 0;
 }
 
 .logo img {
@@ -136,10 +138,6 @@
     justify-content: space-evenly;
     align-items: center;
   
-  }
-
-  .no_nav ul {
-    display: none;
   }
 
   .logo img {

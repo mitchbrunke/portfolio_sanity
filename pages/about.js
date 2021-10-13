@@ -16,7 +16,7 @@ const About = () => {
               of my life living near the spectacular Fraser Island and obtained
               my degree on the Sunshine Coast at USC where I found my passion
               for creating websites that look top notch and rank well on Google.
-              When I am not coding or doig tech things you will find me
+              When I am not coding or doing tech things you will find me
               somewhere near a boat with a fishing rod in my hand or near some
               form of motorsport.
             </p>
