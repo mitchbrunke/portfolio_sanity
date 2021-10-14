@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+//imports
+import { useState } from "react";
 import { useRouter } from "next/router";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -6,17 +7,11 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Layout.module.css";
 
-// You will notice the use of a secondary nav list
-//I saw someone on stack talking about how it could be a nice solution for a nav toggle but it sucks and will be removed
-
 const Nav = () => {
+  //set state for Nav to open and close
   const [openNav, setNavOpen] = useState(false);
+  //use router to be able to highlight the active link, a little hacky but it seems to be the better fix (Next.js things)
   const router = useRouter();
-
-  useEffect(() => {
-    console.log("useeffect ran");
-    console.log(openNav);
-  }, [openNav]);
 
   return (
     <div className={styles.navContainer}>
@@ -33,7 +28,13 @@ const Nav = () => {
         </Link>
       </div>
 
-      <nav className={openNav ? styles.open_nav : styles.nav}>
+      <nav
+        className={openNav ? styles.open_nav : styles.nav}
+        //  toggle to close the nav with state
+        onClick={(e) => {
+          openNav ? setNavOpen(!openNav) : "";
+        }}
+      >
         <ul>
           <Link href="/">
             <a className={router.pathname == "/" ? "active" : ""}>
@@ -55,6 +56,8 @@ const Nav = () => {
           </div>
         </a>
       </Link>
+
+      {/* Toggle to open and close the nav */}
 
       <div
         className={styles.toggle}
