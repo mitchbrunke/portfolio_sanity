@@ -1,4 +1,3 @@
-// pages/posts/[slug].js
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
 import { groq } from "next-sanity";
@@ -65,6 +64,6 @@ export async function getStaticPaths() {
 
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: false,
   };
 }
