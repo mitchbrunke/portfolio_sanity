@@ -6,7 +6,7 @@
   width: 85vw;
   align-items: center;
   margin-bottom: 4vh;
-  border-bottom: 1px solid #eee;
+  
 }
 
 .close_nav {
@@ -55,15 +55,16 @@
 
 .footer {
   width: 100vw;
-  background-color: #242729;
+  /* background-color: #242729; */
+  background-color: #eee;
   color: white;
 }
 
 .footer h3 {
   text-align: center;
   font-size: 5.5rem;
-  color: #242729;
-  -webkit-text-stroke: 1px white;
+  color: #eee;
+  -webkit-text-stroke: 1px #75C4AE;
   padding-top: 2rem;
   margin: 0;
 }
@@ -81,9 +82,13 @@
   flex-direction: column;
 }
 
+.form label {
+  color: #2b2b2b;
+}
+
 .form input {
-  border: 2px solid #242729;
-  background: #f8fafc;
+  border: 2px solid #eee;
+  background: #eee;
   border-radius: 4px;
   width: 100%;
   height: 5vh;
@@ -91,17 +96,19 @@
   font-family: "DM Sans", sans-serif;
   padding: 1rem;
   margin: 0.5rem 0;
+  border-bottom: 1px solid rgb(100, 100, 100);
 }
 
 .form input:focus {
   color: black;
   outline: none;
-  border-bottom: 3px solid #e42727;
+  border-bottom: 3px solid #75C4AE;
 }
 
 .form textarea {
-  border: 2px solid #242729;
-  background: #f8fafc;
+  border: 2px solid #eee;
+  background: #eee;
+  border-bottom: 1px solid rgb(100, 100, 100);
   border-radius: 4px;
   width: 100%;
   height: 10vh;
@@ -110,23 +117,32 @@
   padding: 0.5rem 1rem;
 }
 
+.form textarea:focus {
+  border-bottom: 3px solid #75C4AE;
+}
+
 .form button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border: 2px solid #ffffff;
+  border: 2px solid #ddd;
   box-sizing: border-box;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 23px;
+  border-radius: 3px;
   font-family: DM Sans;
   font-style: normal;
   font-weight: bold;
-  color: white;
-  background: #242729;
+  color: #75C4AE;
+  background:  none;
   padding: 0.5rem 1rem;
   align-self: flex-end;
   margin: 1rem 0;
+  cursor: pointer;
 }
+
+.form button:hover {
+  border: 2px solid #75C4AE;
+}
+
 
 .topForm {
   display: flex;
@@ -163,6 +179,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .navContainer {
+    width: 65vw;
+  }
+
   .nav ul {
     width: 30vw;
   }
@@ -182,7 +202,13 @@
   }
 
   .form {
-    width: 45vw;
+    width: 65vw;
   }
   
+}
+
+@media only screen and (min-width: 1500px) {
+.form {
+  width: 55vw;
+}
 }

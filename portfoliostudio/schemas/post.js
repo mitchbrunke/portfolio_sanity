@@ -47,6 +47,16 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "excerpt",
+      title: "Excerpt",
+      description: "Keep this to 20 words",
+      type: "text",
+      validation: (Rule) =>
+        Rule.max(120).warning(
+          `An experpt shouldn't be more than 120 characters.`
+        ),
+    },
   ],
 
   preview: {

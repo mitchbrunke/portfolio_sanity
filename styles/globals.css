@@ -5,7 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "DM Sans", sans-serif;
-  color: #2b2b2b;
+  color: #666666;
   overflow-x: hidden;
   animation: fadein 2s;
 
@@ -14,11 +14,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  color: #888888;
+  color: #111;
 }
 
 .active {
-  color: red;
+  color: #75C4AE;
 }
 
 * {
@@ -39,6 +39,7 @@ h4,
 h5,
 h6 {
   font-family: "Overpass", sans-serif;
+  color: #111;
 }
 
 hr {

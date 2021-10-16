@@ -14,6 +14,7 @@
     "@formspree/react": "^2.2.4",
     "@mui/icons-material": "^5.0.1",
     "@mui/material": "^5.0.1",
+    "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/image-url": "^1.0.1",
     "keen-slider": "^5.5.1",
     "material-design": "0.0.1",

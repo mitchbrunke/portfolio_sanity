@@ -3,13 +3,22 @@ import Head from "next/head";
 import Image from "next/image";
 import Slider from "../components/Slider";
 import styles from "../styles/Home.module.css";
-import { sanityClient, urlFor } from "../lib/sanity";
+import { urlFor } from "../lib/sanity";
+import { getClient } from "../lib/sanity.server";
 import Link from "next/link";
+import BlogList from "../components/Bloglist";
 
 //Get Sanity Data - using GROC
 //Accessibility to be added & footer component to be updated, looks a little gross
 
 const heroDataQuery = `*[_type == "home_slider"]`;
+const postDataQuery = `*[_type == "post"]{
+  
+  "slug": slug.current,
+  title,
+  mainImage,
+  excerpt
+}`;
 
 //array of logo src's
 
@@ -21,7 +30,7 @@ const logosArray = [
   "/vivere.png",
 ];
 
-export default function Home({ heroData }) {
+export default function Home({ heroData, posts }) {
   return (
     <div className={styles.container}>
       {/* SEO Controlled Here */}
@@ -78,8 +87,6 @@ export default function Home({ heroData }) {
           </div>
         </section>
 
-        <hr />
-
         <section className={styles.projects}>
           <div className={styles.project}>
             <div className={styles.p_text}>
@@ -133,6 +140,12 @@ export default function Home({ heroData }) {
             </div>
           </div>
         </section>
+
+        {/* <hr /> */}
+
+        <section className={styles.blogSection}>
+          <BlogList posts={posts} />
+        </section>
       </main>
     </div>
   );
@@ -141,7 +154,8 @@ export default function Home({ heroData }) {
 //get static props from Sanity.
 
 export async function getStaticProps() {
-  const heroData = await sanityClient.fetch(heroDataQuery);
+  const heroData = await getClient().fetch(heroDataQuery);
+  const posts = await getClient().fetch(postDataQuery);
 
-  return { props: { heroData } };
+  return { props: { heroData, posts } };
 }
