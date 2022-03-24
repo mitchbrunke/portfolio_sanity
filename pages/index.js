@@ -36,7 +36,7 @@ export default function Home({ heroData, posts }) {
       {/* SEO Controlled Here */}
       <Head>
         <title>
-          Front End Developer | Web Developer Hervey Bay | Mitch Brunke
+          Full Stack Engineer | Mitch Brunke
         </title>
         <meta
           name="description"
@@ -53,8 +53,8 @@ export default function Home({ heroData, posts }) {
         <section className={styles.about}>
           <div className={styles.bigText}>
             <h5>
-              I am a front-end developer based in Queensland, Australia. I
-              mainly work with react, next.js and/or WordPress.
+              I am a Full Stack Engineer developer based in Queensland, Australia. I
+              mainly work with React, Node.js and I am currently learning Python.
             </h5>
           </div>
           <div className={styles.littleText}>
@@ -88,6 +88,26 @@ export default function Home({ heroData, posts }) {
         </section>
 
         <section className={styles.projects}>
+
+          <div className={styles.project} id={styles.vfc}>
+            <div className={styles.p_text}>
+              <h5>Ask ECH</h5>
+              <p>
+                I have been working on a React Native app involving serverless technologies and a complex UI. <br />
+              </p>
+
+            </div>
+            <div className={styles.p_img}>
+              <Image
+                src="/rn.png"
+                alt="vfc image"
+                width={1000}
+                height={500}
+                layout="intrinsic"
+              ></Image>
+            </div>
+          </div>
+
           <div className={styles.project}>
             <div className={styles.p_text}>
               <h5>Hervey Bay Seafood Festival</h5>
@@ -113,32 +133,7 @@ export default function Home({ heroData, posts }) {
             </div>
           </div>
 
-          <div className={styles.project} id={styles.vfc}>
-            <div className={styles.p_text}>
-              <h5>Visit Fraser Coast</h5>
-              <p>
-                This site started its life as a slow WordPress website which
-                used a page builder and had over 20s page load times. It now
-                uses a custom WordPress theme which can easily be managed by the
-                marketing team and is earmarked to become a headless WordPress
-                application. It also features a custom back-end which allows
-                complete control over the data being fetched from an external
-                API. <br />
-              </p>
-              <Link href="https://www.visitfrasercoast.com/">
-                <a>View Project</a>
-              </Link>
-            </div>
-            <div className={styles.p_img}>
-              <Image
-                src="/vfcaccomm.PNG"
-                alt="vfc image"
-                width={1000}
-                height={500}
-                layout="intrinsic"
-              ></Image>
-            </div>
-          </div>
+
         </section>
 
         {/* <hr /> */}
